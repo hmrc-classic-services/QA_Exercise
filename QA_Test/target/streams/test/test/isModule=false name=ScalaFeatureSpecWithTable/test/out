@@ -1,0 +1,15 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mScalaFeatureSpecWithTable:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mFeature: Adding events[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Scenario: adding an event *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  TestFailedException was thrown during property evaluation. (ScalaFeatureSpecWithTable.scala:19)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m    Message: "...tp://localhost:8090/[]" was not equal to "...tp://localhost:8090/[8080808080]"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m    Location: (ScalaFeatureSpecWithTable.scala:33)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m    Occurred at table row 0 (zero based, not counting headings), which had values ([0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      Event Name = First day of the year,[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      Event Date = 2018-01-01 00:00,[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      Event Type = Calendar Event,[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      Event Description = New Years Day[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m    )[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m    Given A user is on the events page [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m    When the user fills out the details for the 'First day of the year' [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m    Then the user is taken to the home page with the event details visible [0m[0m

@@ -1,0 +1,15 @@
+@import Helpers._
+@()
+
+@main("Event Planner - Add Event") {
+    @form(
+        "/events/add",
+        None,
+        Seq(
+        textbox("eventName", "Event Name"),
+        textbox("eventDate", "Event Date", "yyyy-MM-dd HH:mm"),
+        textbox("eventType", "Event Type"),
+        textbox("eventDesc", "Event Description")),
+        "get"
+    )
+}

@@ -1,0 +1,51 @@
+@(id : String, action : String, title : Option[String] = None, elements : Seq[(Html,String, String)])
+<div class="grid-row">
+    <div class="column-two-thirds">
+
+        <div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+
+            <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+               There are problems with the form below
+            </h2>
+
+            <ul class="error-summary-list">
+                @for(element <- elements) {
+                    <li><a href="#@{element._2}">@{element._3}</a></li>
+                }
+            </ul>
+
+        </div>
+
+        @if(title != None) {
+            <label class="form-label"> @title </label>
+        }
+
+        <form action="@action" method="POST">
+            <div class="form-group form-group-error">
+                @for(element <- elements) {
+                    <fieldset>
+
+                        <legend id="@{element._2}">
+
+                        @if(title != None) {
+                            <label class="form-label"> @title </label>
+                        }
+
+                        <span class="error-message">
+                            @{element._3}
+                        </span>
+
+                        </legend>
+
+                        @{element._1}
+
+                    </fieldset>
+                }
+            </div>
+
+            <input class="button" type="submit" method="post" value="Continue">
+
+        </form>
+
+    </div>
+</div>

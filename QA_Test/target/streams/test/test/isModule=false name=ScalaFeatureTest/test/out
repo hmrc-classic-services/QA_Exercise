@@ -1,0 +1,15 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mScalaFeatureTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mFeature: The Index Page[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  Scenario: should have a title welcoming them[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  Scenario: should contain the company name[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  Scenario: should have a link that takes the user the add Event page[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mFeature: Adding events[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  Scenario: adding an event[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m    Given A user is on the events page [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m    When the user fills out the details [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m    Then the user is taken to the home page with the event details visible [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mFeature: Adding events via the url[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  Scenario: if I use the URI to add an event[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m    Given a user is on the main page [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m    When they enter the url to add an event [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m    Then the user is taken to the home page with the event details visible [0m[0m

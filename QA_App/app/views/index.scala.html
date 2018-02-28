@@ -1,0 +1,24 @@
+@import Helpers._
+@import model.Event
+@import scala.collection.mutable.HashMap
+@(eventList : HashMap[Long, Event], message : String = "")
+@main("Welcome to the Event Planner") {
+    <h1 class="heading-xlarge">Event Planner</h1>
+   <div>
+       @if(message.nonEmpty) {
+        <h2 class="heading-large">@message</h2>
+       }
+       @Events.list(
+            Seq("ID", "Name", "Description", "Type", "Date"),
+            eventList
+       )
+       <div class="form-group">
+            <a class="button button-start" href="addEvent" role="button">Create Event</a>
+
+
+       </div>
+       <div class="form-group">
+            <a class="button button-start" href="deleteEvent" role="button">Delete Event</a>
+       </div>
+    </div>
+}

@@ -1,0 +1,22 @@
+@(id: String, label: String, helpText: String = "", errorText: String = "", inputClass: String = "input--medium")()
+
+@errorClass = {@if(errorText.nonEmpty){form-field--error}}
+
+<fieldset class="form-field @errorClass" id='@{"fieldset-"+id}'>
+    <label class="form-element" for="@id">@Html(label)</label>
+    @if(helpText.nonEmpty) {
+    <span class="form-hint">
+            @Html(helpText)
+        </span>
+    }
+    <span id="@id-error-message"
+          class="error-notification"
+          role="alert">
+        @Html(errorText)
+    </span>
+    <input type="text"
+           class="@inputClass input--cleared"
+           name = "@id"
+           id = "@id"
+    />
+</fieldset>

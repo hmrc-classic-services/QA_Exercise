@@ -1,0 +1,17 @@
+@(action : String, title : Option[String] = None, elements : Seq[Html], method : String = "post")
+
+<form action="@action" method="@method">
+    <div class="form-group" >
+        @if(title != None) {
+            <label class="form-label"> @title </label>
+        }
+
+        @for(element <- elements) {
+            <div class="form-group">
+                @element <br>
+            </div>
+        }
+
+        <input class="button" type="submit" value="Continue">
+    </div>
+</form>

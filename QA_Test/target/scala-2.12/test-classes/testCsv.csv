@@ -1,0 +1,4 @@
+"Event Name",                "Event Date",       "Event Type",       "Event Description"
+"First day of the year",    "2018-01-01 00:00", "Calendar Event",   "New Years Day"
+"Last day of the year",     "2018-12-31 23:59", "Calendar Event",   "New Years Eve"
+"Tax Returns Due",          "2018-01-31 12:00", "Tax Event",        "Too late now"

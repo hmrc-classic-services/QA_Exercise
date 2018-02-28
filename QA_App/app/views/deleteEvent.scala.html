@@ -1,0 +1,14 @@
+@import Helpers._
+@(message : String = "")
+
+@main("Event Planner - Delete Event") {
+    @if(message.nonEmpty) {
+        <h2 class="heading-large">@message</h2>
+    }
+    @form(
+        "/events/delete",
+        None,
+        Seq(
+        textbox("eventId", "Event ID")
+    ))
+}

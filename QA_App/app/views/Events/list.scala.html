@@ -1,0 +1,25 @@
+@import model.Event
+@import scala.collection.mutable.HashMap
+@(implicit headers : Seq[String], data : HashMap[Long, Event], id : String = "eventList")
+<div class="form-group">
+<table id="@id">
+    <thead>
+    <tr>
+        @for(header <- headers) {
+            <th scope="col">@header</th>
+        }
+    </tr>
+    </thead>
+    <tbody>
+    @for( event <- data) {
+        <tr>
+            <td> @{event._2.eventId} </td>
+            <td> @{event._2.eventName} </td>
+            <td> @{event._2.description} </td>
+            <td> @{event._2.eventType} </td>
+            <td> @{event._2.dateTime} </td>
+        </tr>
+    }
+    </tbody>
+</table>
+</div>
