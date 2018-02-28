@@ -1,4 +1,4 @@
-#QA Exercise
+# QA Exercise
 
 ## General Guidance:
 	- Upload the template projects to a private gitlab repository
